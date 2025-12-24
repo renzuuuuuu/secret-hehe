@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<audio id="bg-music" loop>
+    <source src="/audio/audio.mp3" type="audio/mpeg">
+</audio>
+
+<div class="letter">
+     <button class="btn" onclick="playMusic()">Click this ❤️</button>
+    <h1 class="mc">Merry Christmas Mahallll</h1>
+    <p>I know this to early para sa feb 14 HWHHQHAHAH, but I just want to say that iloveyouuuuuuuu, this the first month, day, hours na magkasama or magkausap ng Christmas. It doesn't matter if hindi pa tayo magkasama, pupunta naman ako diyan next year eh. Anyways back to the topic, I make this website, actually vibe coding lang naman 'to, may tulong ng ai, so ayun I make or build this website for you, para sabihin kung gaano ka seryosong ipursue ka, I know you're thinking a lot, idk kung ano-ano yun, but one thing for sure I'm into you, and ikaw lang yung mahal ko. Even though nung una medyo doubt pa ako sayo, until now pa rin naman nagddoubt pa rin akong baka iwan mo'ko, but I know in myself na wala naman akong ginagawang mali. Hindi na ako magppromise sayo, I'll do it na lang hehe, kasi naman ayaw mo ng drama diba HWHAHHAAHAHAJHAAJAJ, but ayun I won't leave you, no matter what and alam mo naman na yung mga non negotiable ko hehe. I'll say this and repeat to you not because nakakakilig siya but ayan yung nararamdaman ko sayo, iloveyouuuuuuuu so muchhh mahal. Don't think about yourself, you're worth it, you're enough, and ako yung magpapatunay na worth it ka. I hope na sana wag mo na ako murahin HHWHAHAHAHAJAJAJA, emeee. But there are times na mag aaway tayo ganun, but we're arguing not to win but to understand each other, we're different person and may mga bagay talaga tayong 'di pagkakasunduan, so no matter what happens, mag away or hindi, mahal kita, and hindi magbabago yun hihi, I'll repeat this again, iloveyouuuuuuuu so muchhh mahal. ❤️</p>
+</div>
+
+<div class="hearts-container"></div>
+
+<script>
+function playMusic() {
+    const music = document.getElementById("bg-music");
+    music.volume = 0.3; // safe volume
+    music.play();
+}
+
+
+const container = document.querySelector(".hearts-container");
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+  heart.style.fontSize = 12 + Math.random() * 20 + "px";
+
+  container.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+// create hearts every 300ms
+setInterval(createHeart, 300);
+
+</script>
+
+</body>
+</html>
